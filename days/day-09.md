@@ -174,7 +174,8 @@ ls training/day-09
 ```
 
 **ファイルの作り方:**
-- 方法1: Finderで `training/day-09/` フォルダを開き、テキストエディタ（メモ帳等）で新しいファイルを作成して、ファイル名を `data-analysis-report.md` にして保存
+- ターミナルで `open training/day-09` を実行すると Finder でフォルダが開く
+- 方法1: Finder 上でテキストエディット等を使いファイルを作成し、ファイル名を `data-analysis-report.md` にして保存
 - 方法2: ターミナルで `touch training/day-09/data-analysis-report.md` を実行してからエディタで開く
 
 ```bash

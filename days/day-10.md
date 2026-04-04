@@ -148,7 +148,8 @@ ls training/day-10
 ```
 
 **ファイルの作り方:**
-- 方法1: Finderで `training/day-10/` フォルダを開き、テキストエディタ（メモ帳等）で新しいファイルを作成して、ファイル名を `project-a-requirements.md` にして保存
+- ターミナルで `open training/day-10` を実行すると Finder でフォルダが開く
+- 方法1: Finder 上でテキストエディット等を使いファイルを作成し、ファイル名を `project-a-requirements.md` にして保存
 - 方法2: ターミナルで `touch training/day-10/project-a-requirements.md` を実行してからエディタで開く
 
 ```bash

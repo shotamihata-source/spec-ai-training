@@ -51,7 +51,7 @@
 
 ### 2. Cursor 初期設定（Day8）
 
-1. cursor.com からダウンロード・インストール
+1. cursor.com からダウンロード・インストール（Mac の場合、Apple Silicon / Intel を自動判別してダウンロードされる。もし動かない場合はダウンロードページで手動選択する）
 2. 起動後、GitHub アカウントでサインイン
 3. Settings > Models でAIモデルが有効になっていることを確認
 4. File > Open Folder で研修リポジトリのフォルダを開く

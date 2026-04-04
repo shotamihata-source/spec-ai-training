@@ -131,7 +131,8 @@ ls training/day-07
 ```
 
 **ファイルの作り方:**
-- 方法1: Finderで `training/day-07/` フォルダを開き、テキストエディタ（メモ帳等）で新しいファイルを作成して、ファイル名を `slide-outline.md` にして保存
+- ターミナルで `open training/day-07` を実行すると Finder でフォルダが開く
+- 方法1: Finder 上でテキストエディット等を使いファイルを作成し、ファイル名を `slide-outline.md` にして保存
 - 方法2: ターミナルで `touch training/day-07/slide-outline.md` を実行してからエディタで開く
 
 ```bash

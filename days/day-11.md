@@ -256,7 +256,8 @@ ls training/day-11
 ```
 
 **ファイルの作り方:**
-- 方法1: Finderで `training/day-11/` フォルダを開き、テキストエディタ（メモ帳等）で新しいファイルを作成して、ファイル名を `project-a-release-note.md` にして保存
+- ターミナルで `open training/day-11` を実行すると Finder でフォルダが開く
+- 方法1: Finder 上でテキストエディット等を使いファイルを作成し、ファイル名を `project-a-release-note.md` にして保存
 - 方法2: ターミナルで `touch training/day-11/project-a-release-note.md` を実行してからエディタで開く
 
 ```bash

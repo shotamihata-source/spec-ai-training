@@ -138,10 +138,17 @@ ls training/day-04
 - `training/day-04/daily-report.md` — 日報（テンプレート: `templates/daily-report-template.md`）
 
 **ファイルの作り方:**
-- 方法1: Finderで `training/day-04/` フォルダを開き、テキストエディタ（メモ帳等）で新しいファイルを作成して、ファイル名を `ai-foundation-map.md` にして保存
+
+まず、ターミナルで以下を実行すると Finder でフォルダが開きます:
+```bash
+open training/day-04
+```
+
+開いたフォルダの中にファイルを作成します:
+- 方法1: Finder 上で右クリック → テキストエディット（Mac 標準アプリ）などで新しいファイルを作成し、ファイル名を `ai-foundation-map.md` にして保存
 - 方法2: ターミナルで `touch training/day-04/ai-foundation-map.md` を実行してからエディタで開く
 
-> `.md` はMarkdown（マークダウン）形式のファイルです。テキストファイルと同じように文字を書けます。特別なソフトは不要で、メモ帳やテキストエディットで作成・編集できます。
+> `.md` はMarkdown（マークダウン）形式のファイルです。テキストファイルと同じように文字を書けます。特別なソフトは不要で、テキストエディット（Mac 標準）で作成・編集できます。
 
 **Step 3: 変更をステージングする**
 

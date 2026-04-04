@@ -83,7 +83,8 @@ ls training/day-06
 ```
 
 **ファイルの作り方:**
-- 方法1: Finderで `training/day-06/` フォルダを開き、テキストエディタ（メモ帳等）で新しいファイルを作成して、ファイル名を `exhibition-visit-report.md` にして保存
+- ターミナルで `open training/day-06` を実行すると Finder でフォルダが開く
+- 方法1: Finder 上でテキストエディット等を使いファイルを作成し、ファイル名を `exhibition-visit-report.md` にして保存
 - 方法2: ターミナルで `touch training/day-06/exhibition-visit-report.md` を実行してからエディタで開く
 
 ```bash
