@@ -1,0 +1,75 @@
+name: Day Completion Report
+description: Report daily completion status and blockers.
+title: "DayXX completion report - <name>"
+labels:
+  - day-report
+body:
+  - type: input
+    id: day
+    attributes:
+      label: Day
+      description: e.g. Day05
+      placeholder: Day05
+    validations:
+      required: true
+
+  - type: input
+    id: member
+    attributes:
+      label: Member
+      placeholder: your name
+    validations:
+      required: true
+
+  - type: input
+    id: pr_url
+    attributes:
+      label: PR URL
+      placeholder: https://github.com/SHU-T0/spec-ai-training/pull/123
+    validations:
+      required: true
+
+  - type: input
+    id: slack_url
+    attributes:
+      label: Slack notification URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: quiz_score
+    attributes:
+      label: Quiz score
+      description: Must be 100 for final completion.
+      placeholder: 100
+    validations:
+      required: true
+
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Output paths
+      description: List files produced for the day.
+      placeholder: |
+        training/day-xx/file1.md
+        training/day-xx/file2.md
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Completion status
+      options:
+        - Temporary done (PR open, quiz 100, waiting review)
+        - Final done (merged)
+        - Blocked
+    validations:
+      required: true
+
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Blockers or notes
+      placeholder: Write blockers if any.
