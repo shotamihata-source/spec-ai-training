@@ -37,6 +37,8 @@ If not merged, the day is not complete.
 - `curriculum.md`: Day-by-day plan
 - `resources.md`: Reference videos/blogs/official docs
 - `learning-infrastructure.md`: execution loop, review loop, quiz loop
+- `CONTRIBUTING.md`: contribution and PR rules
+- `templates/`: reusable day output, PR body, and daily report templates
 - `references/`: template files are tracked; only `references/farleap-context.local.md` is gitignored
 
 ## Local Private Context
