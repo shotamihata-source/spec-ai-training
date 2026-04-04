@@ -1,28 +1,28 @@
-## Day Summary（当日サマリー）
+## 当日サマリー
 
 - Day:
-- Objective（目的）:
+- 目的:
 
-## Output Paths（成果物パス）
+## 成果物パス
 
 - `training/day-xx/...`
 
-## Quiz Gate Evidence（100点必須）
+## クイズ証跡（100点必須）
 
-- Quiz name（クイズ名）:
-- Score（スコア）:
-- Evidence link or screenshot（証跡）:
+- クイズ名:
+- スコア:
+- 証跡（スクリーンショットまたはリンク）:
 
-## Slack Notification（通知）
+## Slack通知
 
-- Channel（チャンネル）:
-- Notification link（通知リンク）:
+- チャンネル:
+- 通知リンク:
 
-## Review Focus（レビュー観点）
+## レビュー観点
 
-- Please review（重点確認）:
+- 重点的に確認してほしい点:
 
-## Checklist（確認項目）
+## 確認項目
 
 - [ ] 当日成果物をPush済み
 - [ ] クイズ100点達成

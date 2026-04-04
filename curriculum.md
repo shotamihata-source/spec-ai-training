@@ -1,12 +1,12 @@
-# AI Boot Camp カリキュラム（Day4-Day13）
+# AI Boot Camp カリキュラム（Day1-Day13）
 
 最終更新: 2026-04-04
 
 ## 設計原則
 
 - 自走優先: メンター承認待ちで進行を止めない
-- 日次で完結: task, tips, resources, output path, quiz gate, PR checklist を明示
-- FastTrack: 早く終わったメンバーは次タスクへ先行可能
+- 日次で完結: 必須課題、ヒント、提出先、進行ゲート、早期完了者向け追加課題を明示
+- 早期完了者向け: 早く終わったメンバーは追加課題へ先行可能
 - 低レイヤー理論は研修対象外
 
 ## AI基礎の必修範囲
@@ -28,25 +28,131 @@
 
 ---
 
-## Day4
+## Phase 1: オリエンテーション（Day1-Day3）
 
-### Required Tasks（必須課題）
+> Day1-Day3 はGit/GitHub研修前のため、PR提出ではなくSlackまたは直接共有で提出する。
+> Day4のGitHub基礎完了後、過去分もリポジトリにPushすることを推奨する。
 
-1. AI全体像マップを作成
-2. 最低限用語ハンドブックを作成
-3. GitHub基礎を実行（branch / commit / push / PR / merge）
+---
 
-### Output Path（提出先）
+### Day1: 事業理解 + 環境セットアップ
+
+#### 必須課題
+
+1. 事業概要のインプット（組織構造、プロダクト、戦略ドキュメントを読む）
+2. 全アカウントセットアップを完了する（`account-setup.md` の必須セクション参照）
+3. Git初期設定を実施する（Git インストール、ユーザー設定、SSH キー生成、リポジトリ clone）
+
+#### ヒント
+
+- アカウント作成で詰まったら即Slackで報告する。Day2の朝にトラブルが残ると後工程に影響する
+- 事業ドキュメントは完璧に理解する必要はない。全体の構造を掴むことが目的
+- Git初期設定は `account-setup.md` の手順に沿って進める。詰まったらSlackで報告
+
+#### 提出先
+
+- `training/day-01/orientation-notes.md`（事業理解メモ）
+- `training/day-01/daily-report.md`
+
+#### 進行ゲート
+
+- `account-setup.md` の必須項目がすべて完了していること
+- `git push` が通ることの確認
+
+#### 早期完了者向け追加課題
+
+- 戦略ドキュメントを深掘りし、疑問点リストを作成
+
+---
+
+### Day2: AIツール体験 + 基本操作
+
+#### 必須課題
+
+1. Gemini / Claude / ChatGPT それぞれで自由テーマのプロンプトを実行する
+2. 各ツールの応答スタイル・得意分野の違いを体験ログにまとめる
+3. NotebookLM にドキュメントをアップロードし、質問応答を体験する
+
+#### ヒント
+
+- 最初のプロンプトは短くてよい。「○○について教えて」レベルから始める
+- 同じ質問を3ツールに投げると違いがわかりやすい
+- NotebookLM は PDF や Google Docs をソースとして読み込める。事業ドキュメントを入れてみるとよい
+
+#### 提出先
+
+- `training/day-02/tool-experience-log.md`（ツール体験ログ）
+- `training/day-02/daily-report.md`
+
+#### 進行ゲート
+
+- 3ツールすべてで実際にプロンプトを実行済みであること
+
+#### 早期完了者向け追加課題
+
+- 同一プロンプトによる3ツール比較ドキュメントを作成（応答品質・速度・形式の違いを分析）
+
+---
+
+### Day3: プロンプトエンジニアリング基礎
+
+#### 必須課題
+
+1. プロンプトの基本パターンを学習する（Zero-shot / Few-shot / Chain of Thought）
+2. 実務テーマでプロンプトを改善するワークを実施する（改善前後の比較を記録）
+3. AI出力の品質を評価する基準をまとめる（正確性、網羅性、実用性など）
+
+#### ヒント
+
+- 「AIに何を伝えれば、望む出力が得られるか」を考える習慣をつける
+- プロンプトは1回で完璧にならなくてよい。改善プロセス自体が学びになる
+- 出力の評価基準を持つことで、今後の全課題の品質が上がる
+
+#### 提出先
+
+- `training/day-03/prompt-patterns.md`（プロンプトパターン集）
+- `training/day-03/prompt-improvement-log.md`（改善ワークログ）
+- `training/day-03/daily-report.md`
+
+#### 進行ゲート
+
+- Day3クイズ: 100点必須、当日内は再受験無制限
+
+#### 早期完了者向け追加課題
+
+- ペルソナ設定プロンプト（「あなたは○○の専門家です」）の効果比較ドキュメントを作成
+
+---
+
+## Phase 2: AI基礎 + 実務応用（Day4-Day8）
+
+---
+
+### Day4: AI全体像 + GitHub基礎
+
+#### 必須課題
+
+1. AI全体像マップを作成する（主要プレイヤー、ツール分類、利用シーン）
+2. 最低限用語ハンドブックを作成する（上記の必修用語をすべて自分の言葉で解説）
+3. GitHub基礎を実行する（branch / commit / push / PR / merge の一連フロー）
+
+#### ヒント
+
+- AI全体像マップは完璧を目指さなくてよい。まず大枠を掴み、研修中に随時更新する
+- 用語は「自分の言葉で説明できるか」をチェック基準にする
+- GitHub操作は実際にやってみることが最重要。理論より実践
+
+#### 提出先
 
 - `training/day-04/ai-foundation-map.md`
 - `training/day-04/ai-glossary.md`
 - `training/day-04/daily-report.md`
 
-### Quiz Gate（進行ゲート）
+#### 進行ゲート
 
 - Day4クイズ: 100点必須、当日内は再受験無制限
 
-### FastTrack
+#### 早期完了者向け追加課題
 
 - 同一プロンプトによる3ツール比較ドキュメントを追加
 
@@ -71,74 +177,282 @@
 
 ---
 
-## Day5
+### Day5: リサーチ実務 + ハルシネーション対策
 
-- テーマ: リサーチ実務 + ハルシネーション対策
-- Outputs（成果物）:
-  - `training/day-05/research-report.md`
-  - `training/day-05/fact-check-log.md`
-  - `training/day-05/daily-report.md`
+#### 必須課題
 
-## Day6
+1. Gemini Deep Research または ChatGPT Deep Research で業界リサーチを実施する
+2. AI出力のファクトチェックを行い、チェックログを作成する（ソースURL、検証結果、信頼度を記録）
+3. ソース引用付きのリサーチレポートを作成する
 
-- テーマ: 資料作成実務 + 人間/AI役割分担
-- Outputs（成果物）:
-  - `training/day-06/slide-outline.md`
-  - `training/day-06/role-split-matrix.md`
-  - `training/day-06/daily-report.md`
+#### ヒント
 
-## Day7
+- Deep Research は質問の立て方で結果が大きく変わる。具体的な調査テーマを設定すること
+- ハルシネーション（もっともらしい嘘）は必ず発生する。「AIの出力は下書き」という前提で使う
+- ファクトチェックの手順: AI出力 → ソースURL確認 → 一次ソースで裏取り → 信頼度判定
 
-- テーマ: GTM実務 + 差別化整理
-- Outputs（成果物）:
-  - `training/day-07/content-drafts.md`
-  - `training/day-07/x-posts.md`
-  - `training/day-07/daily-report.md`
+#### 提出先
 
-## Day8
+- `training/day-05/research-report.md`
+- `training/day-05/fact-check-log.md`
+- `training/day-05/daily-report.md`
 
-- テーマ: データ分析 + LLM基礎挙動
-- Outputs（成果物）:
-  - `training/day-08/data-analysis-report.md`
-  - `training/day-08/llm-behavior-note.md`
-  - `training/day-08/daily-report.md`
+#### 進行ゲート
 
-## Day9
+- Day5クイズ: 100点必須、当日内は再受験無制限
 
-- テーマ: Project A 設計
-- Outputs（成果物）:
-  - `training/day-09/project-a-requirements.md`
-  - `training/day-09/project-a-mock.md`
-  - `training/day-09/daily-report.md`
+#### 早期完了者向け追加課題
 
-## Day10
+- 同一テーマで Gemini Deep Research と ChatGPT Deep Research の出力を比較分析
 
-- テーマ: Project A 実装・デプロイ
-- Outputs（成果物）:
-  - `training/day-10/project-a-release-note.md`
-  - `training/day-10/roi-memo.md`
-  - `training/day-10/daily-report.md`
+---
 
-## Day11
+### Day6: 資料作成実務 + 人間/AI役割分担
 
-- テーマ: Project B 設計・実装
-- Outputs（成果物）:
-  - `training/day-11/project-b-requirements.md`
-  - `training/day-11/project-b-mock.md`
-  - `training/day-11/daily-report.md`
+#### 必須課題
 
-## Day12
+1. AIを活用してプレゼンテーションのスライドアウトラインを作成する
+2. 人間/AI役割分担マトリクスを作成する（業務工程ごとに「AIが担当」「人間が判断」「協働」を整理）
+3. 実際の資料ドラフトを1点作成する（スライド、提案書、レポートのいずれか）
 
-- テーマ: Project B 完成 + AIレディネス診断
-- Outputs（成果物）:
-  - `training/day-12/project-b-release-note.md`
-  - `training/day-12/ai-readiness-playbook.md`
-  - `training/day-12/daily-report.md`
+#### ヒント
 
-## Day13
+- スライドアウトラインは「構成 → 各スライドの要点 → 詳細」の順でAIに段階的に書かせると品質が上がる
+- 役割分担マトリクスは今後の全業務で使える判断基準になる。汎用的に設計すること
+- 資料作成では「AIに書かせる → 人間がレビュー・修正」のサイクルを体験する
 
-- テーマ: 最終発表 + 実務移行計画
-- Outputs（成果物）:
-  - `training/day-13/final-presentation.md`
-  - `training/day-13/transition-plan.md`
-  - `training/day-13/daily-report.md`
+#### 提出先
+
+- `training/day-06/slide-outline.md`
+- `training/day-06/role-split-matrix.md`
+- `training/day-06/daily-report.md`
+
+#### 進行ゲート
+
+- Day6クイズ: 100点必須、当日内は再受験無制限
+
+#### 早期完了者向け追加課題
+
+- 作成した資料をNotebookLMに投入し、想定QA集を自動生成する
+
+---
+
+### Day7: GTM実務 + 差別化整理
+
+#### 必須課題
+
+1. ターゲット企業向けのコンテンツドラフトを作成する（記事 / LP / メールのいずれか1点以上）
+2. X（Twitter）投稿案を3件以上作成する
+3. 競合との差別化ポイントを整理したドキュメントを作成する
+
+#### ヒント
+
+- コンテンツは「誰に」「何を」「なぜ今」を明確にしてからAIに指示する
+- X投稿は140字前後で要点を伝える練習。AIに複数バリエーションを出させて選ぶ
+- 差別化整理は「競合が言えないこと」を見つけることがポイント
+
+#### 提出先
+
+- `training/day-07/content-drafts.md`
+- `training/day-07/x-posts.md`
+- `training/day-07/daily-report.md`
+
+#### 進行ゲート
+
+- Day7クイズ: 100点必須、当日内は再受験無制限
+
+#### 早期完了者向け追加課題
+
+- 作成したコンテンツのA/Bバリエーションを追加作成し、どちらが効果的か根拠付きで評価する
+
+---
+
+### Day8: データ分析 + LLM基礎挙動
+
+#### 必須課題
+
+1. サンプルデータをAIで分析し、インサイトを含むレポートを作成する
+2. LLMの基本挙動をまとめたノートを作成する（Token予測の仕組み、コンテキストウィンドウ、温度パラメータの概念）
+3. Cursor初期セットアップを完了する（`account-setup.md` Phase 3 参照）
+
+#### ヒント
+
+- データ分析は「何を知りたいか」を先に決めてからAIに投げる。漠然と「分析して」は品質が低い
+- LLM挙動の理解は深い理論不要。「なぜ同じ質問で違う回答が出るか」「なぜ長い会話で精度が落ちるか」が説明できればよい
+- Cursorは今後のProject A/B で使う。この段階でセットアップと基本操作を完了させる
+
+#### 提出先
+
+- `training/day-08/data-analysis-report.md`
+- `training/day-08/llm-behavior-note.md`
+- `training/day-08/daily-report.md`
+
+#### 進行ゲート
+
+- Day8クイズ: 100点必須、当日内は再受験無制限
+- Cursorのインストールと動作確認が完了していること
+
+#### 早期完了者向け追加課題
+
+- 同一データセットを複数のAIツールで分析し、結果の違いを比較するレポートを作成
+
+---
+
+## Phase 3: 開発体験（Day9-Day13）
+
+> Phase 3 では Cursor / V0 / Vercel を使った開発体験を行う。
+> コードを書く能力の習得が目的ではなく、「AIを使えば非エンジニアでもプロダクトを形にできる」ことを体験する。
+
+---
+
+### Day9: Project A 設計
+
+#### 必須課題
+
+1. Project A の要件定義書を作成する（背景、ゴール、スコープ、ターゲットユーザー、主要機能）
+2. V0 または Google Stitch でモックアップを作成する
+3. Vercel初期セットアップを完了する（`account-setup.md` Phase 3 参照）
+
+#### ヒント
+
+- 要件定義はAIに「ユーザーストーリー形式で書いて」と指示すると整理しやすい
+- V0 はテキストでUIを指示するとReactコードを生成してくれる。完璧を目指さず、方向性の確認に使う
+- Project A のテーマは自由だが、「自分の業務で実際に使えるツール」を選ぶと研修後に活きる
+
+#### 提出先
+
+- `training/day-09/project-a-requirements.md`
+- `training/day-09/project-a-mock.md`
+- `training/day-09/daily-report.md`
+
+#### 進行ゲート
+
+- Day9クイズ: 100点必須、当日内は再受験無制限
+- Vercelアカウントのセットアップが完了していること
+
+#### 早期完了者向け追加課題
+
+- モックアップの2パターンを作成し、比較評価する
+
+---
+
+### Day10: Project A 実装・デプロイ
+
+#### 必須課題
+
+1. Cursor + AIコード生成で Project A を実装する
+2. Vercelにデプロイし、公開URLでの動作確認を行う
+3. リリースノートとROIメモを作成する（このツールが業務にどう貢献するか試算）
+
+#### ヒント
+
+- 「動くものを早く作る」が最優先。完璧なコードより、動くプロトタイプ
+- Cursorでは自然言語で指示を出せる。エラーが出たらエラーメッセージをそのままAIに貼って修正を依頼
+- ROIメモは「このツールがなかった場合の工数 vs ある場合の工数」で試算すると説得力が出る
+
+#### 提出先
+
+- `training/day-10/project-a-release-note.md`
+- `training/day-10/roi-memo.md`
+- `training/day-10/daily-report.md`
+
+#### 進行ゲート
+
+- Day10クイズ: 100点必須、当日内は再受験無制限
+- Project AがVercelにデプロイ済みで、公開URLにアクセス可能であること
+
+#### 早期完了者向け追加課題
+
+- Project Aにアナリティクス計測またはOGP（ソーシャルシェア画像）設定を追加
+
+---
+
+### Day11: Project B 設計・実装
+
+#### 必須課題
+
+1. Project B の要件定義書を作成する（Project Aとは異なるテーマ。背景、ゴール、スコープ）
+2. モックアップを作成する
+3. 実装に着手し、基本機能を動作させる
+
+#### ヒント
+
+- Project B は Project A の経験を活かす。設計 → 実装のサイクルがProject Aより速くなっているはず
+- Project A と異なるタイプのツールにすると学びが広がる（例: A がダッシュボードなら B は LP）
+- 1日で設計と実装着手まで進める。完成はDay12
+
+#### 提出先
+
+- `training/day-11/project-b-requirements.md`
+- `training/day-11/project-b-mock.md`
+- `training/day-11/daily-report.md`
+
+#### 進行ゲート
+
+- Day11クイズ: 100点必須、当日内は再受験無制限
+
+#### 早期完了者向け追加課題
+
+- Project B にユーザーフィードバック収集の仕組み（フォーム等）を設計する
+
+---
+
+### Day12: Project B 完成 + AIレディネス診断
+
+#### 必須課題
+
+1. Project B を完成させ、Vercelにデプロイする
+2. AIレディネス診断プレイブックを作成する（業務のAI化可否を判断するフレームワーク）
+3. リリースノートを作成する
+
+#### ヒント
+
+- AIレディネス診断は「どの業務がAI化に適しているか」を判断する汎用ツール。研修後の実務で即使える
+- 診断の観点例: データの有無、繰り返し頻度、判断の複雑さ、ミスの許容度、現状の工数
+- Project B のデプロイまで完了させる。細部の調整よりも「動く状態」を優先
+
+#### 提出先
+
+- `training/day-12/project-b-release-note.md`
+- `training/day-12/ai-readiness-playbook.md`
+- `training/day-12/daily-report.md`
+
+#### 進行ゲート
+
+- Day12クイズ: 100点必須、当日内は再受験無制限
+- Project BがVercelにデプロイ済みで、公開URLにアクセス可能であること
+
+#### 早期完了者向け追加課題
+
+- AIレディネス診断を実際の自社業務フローに適用し、AI化優先度レポートを作成する
+
+---
+
+### Day13: 最終発表 + 実務移行計画
+
+#### 必須課題
+
+1. 研修の総まとめプレゼン資料を作成する（13日間の学び、成果物、成長の振り返り）
+2. 実務移行計画書を作成する（研修で習得したAIスキルを実務でどう活かすか。初月の具体的アクションプランを含む）
+3. 最終発表を実施する
+
+#### ヒント
+
+- プレゼンは「研修前の自分 vs 研修後の自分」の変化を軸にすると伝わりやすい
+- 実務移行計画は具体的に。「AIを使う」ではなく「毎朝のメール処理をClaudeで下書き → レビュー → 送信」レベルの粒度
+- 最終発表はチーム全員の前で実施。フィードバックを受けて計画をブラッシュアップする
+
+#### 提出先
+
+- `training/day-13/final-presentation.md`
+- `training/day-13/transition-plan.md`
+- `training/day-13/daily-report.md`
+
+#### 進行ゲート
+
+- 最終発表の実施完了
+- 全Day（Day3-Day12）のクイズ合格が確認済みであること
+
+#### 早期完了者向け追加課題
+
+- 実務移行計画の初月アクションプランを週単位に細分化し、KPIを設定する

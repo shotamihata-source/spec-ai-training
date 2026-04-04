@@ -1,32 +1,32 @@
 # Day XX 成果物テンプレート
 
-## Objective（目的）
+## 目的
 
 - 当日の到達目標を記載
 
-## Outputs
+## 成果物
 
-### 1) Main Artifact（主成果物）
+### 1) 主成果物
 
-- Path: `training/day-xx/<artifact>.md`
-- Summary（要約）:
+- パス: `training/day-xx/<artifact>.md`
+- 要約:
 
-### 2) Supporting Artifact(s)（補助成果物）
+### 2) 補助成果物
 
-- Path:
-- Summary（要約）:
+- パス:
+- 要約:
 
-## Tips Applied（使ったヒント）
+## 活用したヒント
 
 - 適用したヒントや実践内容を記載
 
-## Resource Links Used（参照教材）
+## 参照した教材
 
-- URL / doc path を記載
+- URL またはドキュメントパスを記載
 
-## Self-Check（自己確認）
+## 自己確認
 
-- [ ] Output path が正しい
-- [ ] レビュー可能な品質になっている
+- [ ] ファイルパスが正しい
+- [ ] 第三者が読んで理解できる品質になっている
 - [ ] 日報を追加した
 - [ ] クイズ100点を達成した

@@ -1,30 +1,43 @@
 # Spec AI Training
 
-AIオンボーディング研修の公開リポジトリ。
+AI研修プログラムの公開リポジトリ。メンバーがこのリポジトリだけで研修を自走できることを目指す。
 
 ## 目的
 
-- 研修資料をプライベートな業務リポジトリから分離する
-- 各メンバーがこのリポジトリをcloneして自走できる状態を作る
+- 研修資料をプライベートな業務リポジトリから分離し、このリポジトリを唯一の参照先とする
+- 各メンバーがcloneして、カリキュラムに沿って自走できる状態を作る
 - 日次完了フローをGitHub運用で標準化する
 
 ## 対象範囲
 
-- Day4-Day13 のカリキュラム
+- Day1-Day13 の全カリキュラム（Phase 1: オリエンテーション / Phase 2: AI基礎+実務応用 / Phase 3: 開発体験）
+- アカウントセットアップ手順
 - 学習リソース
-- 学習運用ルール（レビュー、クイズ、完了判定）
+- 学習運用ルール（提出、レビュー、クイズ、完了判定）
 
-## 日次必須ルール（Git/GitHubレッスン後）
+## 研修の進め方
 
-Day5以降の1日完了条件は以下。
+### Phase 1（Day1-Day3）: オリエンテーション
 
-1. 当日成果物を個人リポジトリへPush（`training/day-xx/`）
+- `curriculum.md` のDay1-Day3に沿って進める
+- Git/GitHub研修前のため、成果物はSlackまたは直接共有で提出
+- アカウントセットアップは `account-setup.md` を参照
+
+### Phase 2-3（Day4-Day13）: AI基礎 + 実務応用 + 開発体験
+
+Day5以降の1日完了条件は以下の通り。
+
+1. 当日成果物を `training/day-xx/` にPush
 2. PR作成
-3. GitHub -> Slack 通知を確認
+3. GitHub → Slack 通知を確認
 4. レビューコメントを反映
 5. PRをMerge
 
 Mergeされていない場合、その日は未完了扱い。
+
+レビュー遅延時の暫定完了条件:
+- PR作成済み + Slack通知確認 + クイズ100点で暫定完了
+- 最終完了はMerge後に確定
 
 ## クイズゲート
 
@@ -34,19 +47,28 @@ Mergeされていない場合、その日は未完了扱い。
 
 ## リポジトリ構成
 
-- `curriculum.md`: 日別カリキュラム
-- `resources.md`: 参考教材（動画、記事、公式ドキュメント）
-- `learning-infrastructure.md`: 実行ループ、レビュー運用、クイズ運用
-- `CONTRIBUTING.md`: 運用ルールとPRルール
-- `templates/`: 日次アウトプット/PR本文/日報テンプレート
-- `references/`: テンプレートは追跡対象、`references/farleap-context.local.md` のみgitignore対象
+| ファイル / ディレクトリ | 内容 |
+|------------------------|------|
+| `curriculum.md` | 日別カリキュラム（Day1-Day13 の全課題・ヒント・進行ゲート） |
+| `account-setup.md` | ツール・アカウントのセットアップ手順 |
+| `resources.md` | 参考教材（動画、記事、公式ドキュメント） |
+| `learning-infrastructure.md` | 実行ループ、レビュー運用、クイズ運用 |
+| `CONTRIBUTING.md` | 運用ルールとPRルール |
+| `templates/` | 日次アウトプット / PR本文 / 日報のテンプレート |
+| `references/` | コンテキストテンプレート（追跡対象） |
 
 ## ローカル限定コンテキスト
 
 業務上の内部コンテキストが必要な場合は、ローカル専用ファイルを利用する。
 
-- `references/farleap-context.local.md`（gitignore）
+- `references/farleap-context.local.md`（gitignore対象）
 
 テンプレートは以下を使用。
 
 - `references/farleap-context.example.md`
+
+## 困ったときは
+
+1. まず `curriculum.md` と `account-setup.md` を再確認する
+2. 解決しない場合は Slack の研修チャンネルで質問する
+3. 質問するときは「何をしようとして」「何が起きて」「何を試したか」を書く
