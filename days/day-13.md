@@ -162,20 +162,16 @@ Claude に以下のように指示:
 **AI に以下のように依頼する:**
 
 ```
-研修リポジトリ（~/Desktop/spec-ai-training）で以下の Git 操作をしてください:
+研修リポジトリ（~/Desktop/spec-ai-training）で以下の操作をしてください:
 1. main ブランチの最新を pull
 2. training/day-13-final という新しいブランチを作成
 3. training/day-13/ フォルダの変更をすべて add
 4. コミットメッセージ「docs: add Day13 final presentation and transition plan」でコミット
 5. リモートに push
+6. gh コマンドで PR を作成（タイトル: 「Day13: 最終発表 + 実務移行計画」）
 ```
 
-**GitHubでPRを作成:**
-1. https://github.com/あなたのユーザー名/spec-ai-training を開く
-2. 「Compare & pull request」をクリック
-3. **base repository** が自分のリポジトリになっていることを確認（親リポジトリが選ばれていたら変更）
-4. タイトル: `Day13: 最終発表 + 実務移行計画`
-5. テンプレートに記入 → 「Create pull request」
+> PR 作成後、GitHub 上で **base repository** が自分のリポジトリになっていることを確認すること。
 
 ---
 

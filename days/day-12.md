@@ -198,20 +198,16 @@ Day12 では Claude Code デスクトップアプリを使っているので、G
 **Claude Code のチャットで以下のように依頼する:**
 
 ```
-研修リポジトリ（~/Desktop/spec-ai-training）で以下の Git 操作をしてください:
+研修リポジトリ（~/Desktop/spec-ai-training）で以下の操作をしてください:
 1. main ブランチの最新を pull
 2. training/day-12-project-b という新しいブランチを作成
 3. training/day-12/ フォルダの変更をすべて add
 4. コミットメッセージ「docs: add Day12 Project B requirements and release note」でコミット
 5. リモートに push
+6. gh コマンドで PR を作成（タイトル: 「Day12: Project B 設計・実装・デプロイ完了」、本文に公開URLを記載）
 ```
 
-**GitHubでPRを作成:**
-1. https://github.com/あなたのユーザー名/spec-ai-training を開く
-2. 「Compare & pull request」をクリック
-3. **base repository** が自分のリポジトリになっていることを確認（親リポジトリが選ばれていたら変更）
-4. タイトル: `Day12: Project B 設計・実装・デプロイ完了`
-5. テンプレートに記入（公開URLを必ず記載）→ 「Create pull request」
+> PR 作成後、GitHub 上で **base repository** が自分のリポジトリになっていることを確認すること。
 
 ---
 
