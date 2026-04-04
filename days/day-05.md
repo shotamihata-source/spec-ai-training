@@ -99,8 +99,9 @@ Switched to a new branch 'training/day-05-research'
 ```
 
 ```bash
-# フォルダを作成
-mkdir -p training/day-05
+# フォルダが存在するか確認する（最初から用意されているはず）
+ls training/day-05
+# もし「No such file or directory」と表示されたら: mkdir -p training/day-05
 ```
 
 **ファイルの作り方:**

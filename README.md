@@ -548,11 +548,12 @@ git checkout -b training/day-XX-テーマ名
 #### ステップ 3: 成果物フォルダとファイルを作成する
 
 ```bash
-# 成果物フォルダを作成する
-mkdir -p training/day-XX
+# 成果物フォルダが存在するか確認する（最初から用意されているはず）
+ls training/day-XX
+# もしフォルダがない場合は作成する: mkdir -p training/day-XX
 ```
 
-> **例**: Day5 の場合: `mkdir -p training/day-05`
+> **例**: Day5 の場合: `ls training/day-05`
 
 この `training/day-XX/` フォルダの中に成果物ファイルを作成してください。ファイルの作成はテキストエディタ（メモ帳、VSCode、Cursor など）で行ってかまいません。
 
@@ -678,10 +679,10 @@ spec-ai-training/
 │   ├── day-output-template.md     ← 成果物テンプレート
 │   ├── daily-report-template.md   ← 日報テンプレート
 │   └── day-pr-body-template.md    ← PR本文テンプレート
-├── training/                      ← ★ ここに自分の成果物を作成する（※）
+├── training/                      ← ★ ここに自分の成果物を作成する
 │   ├── day-01/
 │   ├── day-02/
-│   └── ...
+│   └── ... (day-13/ まで作成済み)
 ├── references/                    ← 参考資料テンプレート
 │   └── farleap-context.example.md
 └── .github/                       ← GitHub設定（PR・Issueテンプレート）
@@ -689,7 +690,7 @@ spec-ai-training/
     └── ISSUE_TEMPLATE/
 ```
 
-> **※ `training/` フォルダについて**: クローン直後にはこのフォルダは存在しません。Day4 以降、各Day のガイドに従って `mkdir -p training/day-XX` コマンドで作成します。最初から無いのは正常です。
+> **`training/` フォルダについて**: `training/day-01/` 〜 `training/day-13/` は最初から用意されています。各Dayの成果物は対応するフォルダに直接作成してください。
 
 ---
 

@@ -143,7 +143,8 @@ cd ~/Desktop/spec-ai-training
 git pull origin main
 git checkout -b training/day-10-project-a-design
 
-mkdir -p training/day-10
+# training/day-10 は用意済み。なければ: mkdir -p training/day-10
+ls training/day-10
 ```
 
 **ファイルの作り方:**

@@ -126,7 +126,8 @@ cd ~/Desktop/spec-ai-training
 git pull origin main
 git checkout -b training/day-07-docs-role-split
 
-mkdir -p training/day-07
+# training/day-07 は用意済み。なければ: mkdir -p training/day-07
+ls training/day-07
 ```
 
 **ファイルの作り方:**

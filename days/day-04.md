@@ -125,8 +125,10 @@ Switched to a new branch 'training/day-04-ai-foundation'
 **Step 2: 成果物ファイルを作成する**
 
 ```bash
-# フォルダを作成
-mkdir -p training/day-04
+# フォルダが存在するか確認する（最初から用意されているはず）
+ls training/day-04
+# もし「No such file or directory」と表示されたら以下を実行:
+# mkdir -p training/day-04
 ```
 
 以下のファイルを作成する:

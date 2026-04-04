@@ -149,7 +149,8 @@ cd ~/Desktop/spec-ai-training
 git pull origin main
 git checkout -b training/day-08-gtm-differentiation
 
-mkdir -p training/day-08
+# training/day-08 は用意済み。なければ: mkdir -p training/day-08
+ls training/day-08
 ```
 
 **ファイルの作り方:**

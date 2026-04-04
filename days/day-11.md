@@ -251,7 +251,8 @@ cd ~/Desktop/spec-ai-training
 git pull origin main
 git checkout -b training/day-11-project-a-deploy
 
-mkdir -p training/day-11
+# training/day-11 は用意済み。なければ: mkdir -p training/day-11
+ls training/day-11
 ```
 
 **ファイルの作り方:**
