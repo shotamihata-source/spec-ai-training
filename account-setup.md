@@ -49,7 +49,7 @@
 4. リポジトリのフォーク（README セクション5）
 5. フォークしたリポジトリのクローン（README セクション6）
 
-### 2. Cursor 初期設定（Day8）
+### 2. Cursor 初期設定（Day4）
 
 1. cursor.com からダウンロード・インストール（Mac の場合、Apple Silicon / Intel を自動判別してダウンロードされる。もし動かない場合はダウンロードページで手動選択する）
 2. 起動後、GitHub アカウントでサインイン
@@ -57,7 +57,7 @@
 4. File > Open Folder で研修リポジトリのフォルダを開く
 5. ターミナル（Ctrl+`）で `git status` が通ることを確認
 
-### 3. Vercel 初期設定（Day9）
+### 3. Vercel 初期設定（Day10）
 
 1. vercel.com で「Continue with GitHub」を選択しサインアップ
 2. チーム招待メールが届いている場合は承認する

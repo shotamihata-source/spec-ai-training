@@ -338,7 +338,7 @@ git push origin training/day-04-tool-comparison
 
 | エラー | 対処 |
 |--------|------|
-| `Permission denied (publickey)` | SSH キーが GitHub に登録されていない → 課題2のSSHキー設定を再実行 |
+| `Permission denied (publickey)` | SSH キーが GitHub に登録されていない → 課題3のSSHキー設定を再実行 |
 | `fatal: not a git repository` | `spec-ai-training` フォルダの中にいない → `cd ~/Desktop/spec-ai-training` |
 | `error: failed to push` | 同名ブランチが既にある → ブランチ名を変更（例: `-v2` を末尾に追加） |
 
