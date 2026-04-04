@@ -1,21 +1,147 @@
-# Day 4 — 4/6 (月): AI全体像 + GitHub基礎
+# Day 4 — 4/6 (月): 3ツール比較整理 + Markdown + Git
 
 ## 今日のゴール
 
-AI業界の全体像を整理し、GitHubでのPR（Pull Request）ワークフローを習得する。今日から成果物は Git/GitHub で提出する。
+Day1-3 で使った3ツールの使い分けを自分の言葉で整理する。Markdown で構造化ドキュメントを書けるようになる。Git/GitHub の基本操作（clone / add / commit / push / PR）を習得し、今日から成果物は Git で提出する。
 
 ---
 
-## 必須課題
+## Morning Briefing — 30 min
 
-### 課題1: AI全体像マップを作成する
+- Markdown 記法の基本解説（15 min）
+- Git の概念と基本操作の解説（15 min）
 
-Day1-3 で触ったツールを起点に、AI業界の全体像を整理する。
+---
+
+## 課題1: Markdown 基礎ハンズオン
+
+Markdown（マークダウン）は、テキストに簡単な記号を加えるだけで見出し・箇条書き・表を表現できる記法。Day4 以降の成果物はすべて Markdown 形式で作成する。
+
+**ハンズオン:**
+
+1. [Markdown Tutorial](https://www.markdowntutorial.com/jp/) にアクセスする
+2. チュートリアルを最後まで一通りやる（所要時間: 約30分）
+
+**よく使う Markdown 記法（リファレンス）:**
+
+| 記法 | 表示結果 | 用途 |
+|------|---------|------|
+| `# 見出し` | 大見出し | セクションタイトル |
+| `## 小見出し` | 小見出し | サブセクション |
+| `- 項目` | ・項目 | 箇条書き |
+| `1. 項目` | 1. 項目 | 番号付きリスト |
+| `**太字**` | **太字** | 強調 |
+| `[テキスト](URL)` | リンク | 参照 |
+| `> 引用` | 引用ブロック | 注意書き |
+| `` `コード` `` | `コード` | コマンドや用語 |
+
+> `.md` はMarkdown形式のファイルの拡張子。テキストファイルと同じように文字を書ける。
+
+---
+
+## 課題2: Git / GitHub セットアップ + 基礎操作
+
+Git と GitHub を使うための初期設定を行い、実際に操作を体験する。**この設定は1回だけ実行すればOK。**
+
+> 以下の各ステップは `README.md` のセクション3〜6に詳しい解説があります。詰まったら README を参照してください。
+
+### ターミナルを開く
+
+Ghostty（推奨）または Mac 標準のターミナル.app を起動する。
+→ 詳細: README [セクション3: ターミナルの準備](../README.md#3-ターミナルterminalの準備)
+
+### Git を確認する
+
+```bash
+git --version
+```
+
+バージョンが表示されればOK。「コマンドラインデベロッパーツールが必要」と出たら「インストール」をクリック。
+→ 詳細: README [セクション4-1](../README.md#4-1-git-のインストール)
+
+### GitHub アカウントを作成する
+
+https://github.com でアカウントを作成する（既にある人はスキップ）。
+→ 詳細: README [セクション4-2](../README.md#4-2-github-アカウントの作成)
+
+### Git 初期設定
+
+```bash
+git config --global user.name "あなたの名前"
+git config --global user.email "あなたのメールアドレス"
+```
+
+→ 詳細: README [セクション4-3](../README.md#4-3-git-の初期設定)
+
+### SSH キーの設定
+
+```bash
+ssh-keygen -t ed25519 -C "あなたのメールアドレス"
+```
+
+パスフレーズの入力を求められたら、そのまま `Enter` を2回押す。
+
+```bash
+cat ~/.ssh/id_ed25519.pub | pbcopy
+```
+
+1. https://github.com/settings/keys を開く
+2. 「New SSH key」→ Title に `My Laptop`、Key に貼り付け → 「Add SSH key」
+3. 接続テスト:
+
+```bash
+ssh -T git@github.com
+```
+
+`Hi あなたのユーザー名!` と表示されれば成功。
+→ 詳細: README [セクション4-4](../README.md#4-4-ssh-キーの設定github-との安全な通信)
+
+### リポジトリをフォーク & クローン
+
+1. https://github.com/SHU-T0/spec-ai-training を開いて右上の「Fork」→「Create fork」
+
+2. ターミナルで:
+
+```bash
+cd ~/Desktop
+git clone git@github.com:あなたのユーザー名/spec-ai-training.git
+cd spec-ai-training
+git remote add upstream git@github.com:SHU-T0/spec-ai-training.git
+```
+
+→ 詳細: README [セクション5](../README.md#5-このリポジトリをフォークする)、[セクション6](../README.md#6-フォークしたリポジトリをクローンする)
+
+### Git 基礎練習
+
+テスト用リポジトリを使って add / commit / push を体験する。
+
+```bash
+# 自分のテスト用リポジトリを GitHub で作成（Private でOK、リポジトリ名は自由）
+# 作成後、ターミナルで:
+cd ~/Desktop
+git clone git@github.com:あなたのユーザー名/テストリポジトリ名.git
+cd テストリポジトリ名
+```
+
+適当なファイル（例: 昨日の学びをまとめたメモ）を作成して:
+
+```bash
+git add .
+git commit -m "docs: add learning notes"
+git push origin main
+```
+
+**「自分の変更がリモートに反映された」体験ができればOK。** GitHub のリポジトリページをリロードしてファイルが表示されることを確認する。
+
+---
+
+## 課題3: 3ツール使い分けガイドを作成する
+
+Day1-3 で触った Gemini / Claude / ChatGPT を総整理する。
 
 **Step 1: AI に全体像の骨格を作ってもらう**
 
-1. Claude または Gemini を開く
-2. 以下のプロンプトを入力する:
+Claude または Gemini に以下のように聞く:
 
 ```
 AI業界の全体像を整理したいです。以下の観点でマップを作ってください:
@@ -32,18 +158,30 @@ AI業界の全体像を整理したいです。以下の観点でマップを作
 これらを含めて、Markdown形式で整理してください。
 ```
 
-**Step 2: 自分の体験を加えて完成させる**
+**Step 2: 「この業務にはこのツール」の対応表を作る**
 
-AI の出力に以下を追記する:
+Day1-3 の体験をもとに、以下の比較表を **自分の判断で** 作成する:
+
+| 業務 | おすすめツール | 理由 |
+|------|-------------|------|
+| 市場調査 | | |
+| 文章作成 | | |
+| 資料構成 | | |
+| データ分析 | | |
+| ブレスト | | |
+| コード生成 | | |
+
+**Step 3: 自分の体験を加えて完成させる**
+
 - Day1-3 で実際に使った感想
-- 「○○にはこのツールが向いている」という自分の判断
+- 各ツールの得意・不得意の自分なりの評価
 - まだ触っていないが気になるツール
 
-成果物: `training/day-04/ai-foundation-map.md`
+成果物: `training/day-04/tool-comparison-guide.md`（Markdown 形式）
 
 ---
 
-### 課題2: 最低限用語ハンドブックを作成する
+## 課題4: AI用語ハンドブックを作成する
 
 以下の用語を **自分の言葉で** 解説する。AIの出力をそのまま貼るのはNG。
 
@@ -75,151 +213,123 @@ AI の出力に以下を追記する:
 
 ---
 
-### 課題3: GitHub基礎（branch → commit → push → PR → merge）
+## 課題5: プロンプトエンジニアリング入門
 
-**これが今日の最重要課題。** ここで学ぶワークフローは Day5 以降毎日使う。
+良いプロンプトと悪いプロンプトの違いを実験で学ぶ。
 
-**前提確認:**
+**比較実験（まず試す）:**
 
-> **ターミナルとは？** コマンド（命令文）を入力してPCを操作するアプリです。Day4以降は毎日使います。
-> まだインストールしていない方は、`README.md` のセクション「2. 研修を始める前に必要なもの」を参照してください。
+```
+悪い例: 「営業メールを書いて」
+良い例: 「SaaS企業の営業担当として、IT部門の課長クラスに初回接触するメールを書いてください。
+       製品はHR評価ツール。300字以内で、課題提起→解決策→次のアクションの構成で。」
+```
 
-Ghostty（またはターミナル.app）を開いて、以下を実行する。
+**テクニック:**
+- **具体的な指示**: 曖昧さを減らし、期待する出力を明示する
+- **役割設定（System Prompt）**: 「あなたは○○の専門家です」と前置きする
+- **Few-shot**: 例を1-2個示してからAIに回答させる
+- **Chain of Thought**: 「ステップバイステップで考えてください」と指示する
+
+**課題**: 「自分のベストプロンプト集」を5個以上作成する。各プロンプトには以下を含める:
+- 用途（何に使うか）
+- プロンプト本文
+- 使用テクニック
+- 出力例の要約
+
+成果物: `training/day-04/prompt-collection.md`
+
+---
+
+## 課題6: Week 1 振り返りレポート
+
+Day1-4 を振り返り、以下をまとめる:
+- 学んだこと（ツール別）
+- 一番驚いた/役に立った AI 体験
+- まだ理解できていないこと
+- 来週やりたいこと
+
+成果物: `training/day-04/week1-review.md`
+
+---
+
+## Git 操作: 成果物の提出（branch → commit → push → PR）
+
+**ここで学ぶワークフローは Day5 以降毎日使う。**
+
+Ghostty（またはターミナル.app）を開いて、リポジトリフォルダに移動する。
 
 ```bash
-# Git がインストールされているか確認
-git --version
-```
-
-以下のような表示が出れば成功:
-```
-git version 2.39.5 (Apple Git-154)
-```
-
-表示されない場合: `account-setup.md` の Git 初期設定を先に完了する。
-
-```bash
-# 研修リポジトリに移動する（クローン先がデスクトップの場合）
+# 研修リポジトリに移動
 cd ~/Desktop/spec-ai-training
-```
 
-表示がエラーになる場合: リポジトリの clone がまだ。`README.md` のセクション「5. このリポジトリをフォークする」→「6. フォークしたリポジトリをクローンする」を参照して fork と clone を実行する。
-
-**Step 1: ブランチを作成する**
-
-```bash
 # 最新の main ブランチを取得
 git pull origin main
 
 # 新しいブランチを作成して切り替える
-git checkout -b training/day-04-ai-foundation
+git checkout -b training/day-04-tool-comparison
 ```
 
 以下のような表示が出れば成功:
 ```
-Switched to a new branch 'training/day-04-ai-foundation'
+Switched to a new branch 'training/day-04-tool-comparison'
 ```
 
-> **ブランチとは?** 「本体（main）に影響を与えずに、自分の作業場所を作る」仕組み。自分のブランチで作業し、完成したら本体に合流（merge）する。
+> **ブランチとは?** 「本体（main）に影響を与えずに、自分の作業場所を作る」仕組み。
 
-**Step 2: 成果物ファイルを作成する**
+**ファイルの作り方:**
 
 ```bash
 # フォルダが存在するか確認する（最初から用意されているはず）
 ls training/day-04
-# もし「No such file or directory」と表示されたら以下を実行:
-# mkdir -p training/day-04
+# もし「No such file or directory」と表示されたら: mkdir -p training/day-04
 ```
+
+ターミナルで `open training/day-04` を実行すると Finder でフォルダが開く。開いたフォルダの中にファイルを作成する:
+- 方法1: Finder 上で右クリック → テキストエディット等で新しいファイルを作成
+- 方法2: ターミナルで `touch training/day-04/tool-comparison-guide.md` を実行してからエディタで開く
+
+> **Mac のテキストエディットを使う場合の注意**: デフォルトでリッチテキスト（.rtf）形式で保存される。`.md` ファイルを正しく作成するには、メニューの **「フォーマット」→「標準テキストにする」** を選んでからファイルを作成・保存すること。
 
 以下のファイルを作成する:
-
-- `training/day-04/ai-foundation-map.md` — 課題1の成果物
-- `training/day-04/ai-glossary.md` — 課題2の成果物
+- `training/day-04/tool-comparison-guide.md` — 課題3の成果物
+- `training/day-04/ai-glossary.md` — 課題4の成果物
+- `training/day-04/prompt-collection.md` — 課題5の成果物
+- `training/day-04/week1-review.md` — 課題6の成果物
 - `training/day-04/daily-report.md` — 日報（テンプレート: `templates/daily-report-template.md`）
 
-**ファイルの作り方:**
-
-まず、ターミナルで以下を実行すると Finder でフォルダが開きます:
 ```bash
-open training/day-04
-```
-
-開いたフォルダの中にファイルを作成します:
-- 方法1: Finder 上で右クリック → テキストエディット（Mac 標準アプリ）などで新しいファイルを作成し、ファイル名を `ai-foundation-map.md` にして保存
-- 方法2: ターミナルで `touch training/day-04/ai-foundation-map.md` を実行してからエディタで開く
-
-> `.md` はMarkdown（マークダウン）形式のファイルです。テキストファイルと同じように文字を書けます。
-
-> **Mac のテキストエディットを使う場合の注意**: テキストエディットはデフォルトでリッチテキスト（.rtf）形式で保存します。`.md` ファイルを正しく作成するには、メニューの **「フォーマット」→「標準テキストにする」** を選んでからファイルを作成・保存してください。これをしないと、ファイルの中身が壊れて Git で正しく管理できません。
-
-**Step 3: 変更をステージングする**
-
-```bash
-# 作成したファイルをステージング（コミット対象に追加）
+# ステージング（コミット対象に追加）
 git add training/day-04/
-```
 
-確認コマンド:
-```bash
+# 確認
 git status
 ```
 
-以下のような表示が出れば成功:
-```
-On branch training/day-04-ai-foundation
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   training/day-04/ai-foundation-map.md
-        new file:   training/day-04/ai-glossary.md
-        new file:   training/day-04/daily-report.md
-```
-
-**Step 4: コミットする**
+緑色で `new file: training/day-04/...` と表示されればOK。
 
 ```bash
-git commit -m "docs: add Day4 AI foundation map and glossary"
-```
+# コミット
+git commit -m "docs: add Day4 tool comparison and glossary"
 
-以下のような表示が出れば成功:
-```
-[training/day-04-ai-foundation abc1234] docs: add Day4 AI foundation map and glossary
- 3 files changed, XX insertions(+)
- create mode 100644 training/day-04/ai-foundation-map.md
- create mode 100644 training/day-04/ai-glossary.md
- create mode 100644 training/day-04/daily-report.md
+# プッシュ
+git push origin training/day-04-tool-comparison
 ```
 
 > **コミットとは?** 「この状態を保存する」操作。ゲームのセーブポイントのようなもの。
-
-**Step 5: プッシュする**
-
-```bash
-git push origin training/day-04-ai-foundation
-```
-
-以下のような表示が出れば成功:
-```
-Enumerating objects: 6, done.
-...
-To github.com:あなたのユーザー名/spec-ai-training.git
- * [new branch]      training/day-04-ai-foundation -> training/day-04-ai-foundation
-```
-
 > **プッシュとは?** 自分のPCの変更をGitHub（クラウド）にアップロードすること。
 
-**Step 6: GitHubでPRを作成する**
+**GitHub で PR を作成する:**
 
 1. ブラウザで https://github.com/あなたのユーザー名/spec-ai-training を開く
-2. ページ上部に黄色いバナーで「training/day-04-ai-foundation had recent pushes...」と表示される
+2. ページ上部に黄色いバナーで「training/day-04-tool-comparison had recent pushes...」と表示される
 3. 「Compare & pull request」ボタンをクリック
-4. PR作成画面が開く:
+4. PR作成画面:
    - **base repository**: **自分のリポジトリ**（`あなたのユーザー名/spec-ai-training`）になっていることを確認。親リポジトリ（`SHU-T0/spec-ai-training`）が選ばれている場合は、ドロップダウンで自分のリポジトリに変更する
    - **base**: `main`
-   - **タイトル**: `Day4: AI全体像マップ + 用語ハンドブック`
+   - **タイトル**: `Day4: 3ツール比較 + 用語集 + プロンプト集`
    - **本文**: テンプレートに記入する（`templates/day-pr-body-template.md` を参照）
 5. 「Create pull request」ボタンをクリック
-
-**この画面が出たらスクリーンショットを撮ってください（PRが作成された状態の画面）。**
 
 > **PRとは?** 「自分の変更を本体に合流させてほしい」というリクエスト。レビュー担当者がチェックしてからmerge（合流）する。
 
@@ -227,15 +337,22 @@ To github.com:あなたのユーザー名/spec-ai-training.git
 
 | エラー | 対処 |
 |--------|------|
-| `Permission denied (publickey)` | SSH キーが GitHub に登録されていない → `account-setup.md` の SSH キー設定を再実行 |
-| `fatal: not a git repository` | `spec-ai-training` フォルダの中にいない → `cd spec-ai-training` を実行 |
-| `error: failed to push` | 同名ブランチが既にある → ブランチ名を変更（例: `training/day-04-ai-foundation-v2`） |
+| `Permission denied (publickey)` | SSH キーが GitHub に登録されていない → 課題2のSSHキー設定を再実行 |
+| `fatal: not a git repository` | `spec-ai-training` フォルダの中にいない → `cd ~/Desktop/spec-ai-training` |
+| `error: failed to push` | 同名ブランチが既にある → ブランチ名を変更（例: `-v2` を末尾に追加） |
+
+---
+
+## Weekend Mission
+
+「AI に聞いてみたいこと10個リスト」を作って実際に聞く。Gemini / Claude / ChatGPT の3ツールで聞き比べる。
 
 ---
 
 ## ヒント
 
-- AI全体像マップは完璧を目指さなくてOK。Day1-3 で触ったツールを中心に、知っている範囲でまとめる
+- Markdown チュートリアルは30分で終わる。最初にやってしまうと後の成果物作成がスムーズ
+- 3ツール比較は完璧を目指さなくてOK。Day1-3 で触った範囲でまとめる
 - 用語ハンドブックは「自分の言葉で説明できるか」がチェック基準。AIの出力のコピペは不可
 - Git操作は「覚える」より「やってみる」が最速。エラーが出ても壊れないので安心して実行すること
 - PRテンプレートは `templates/day-pr-body-template.md` にある。コピーして使う
@@ -265,8 +382,8 @@ To github.com:あなたのユーザー名/spec-ai-training.git
 
 ## 参考リソース
 
+- [Markdown Tutorial（日本語）](https://www.markdowntutorial.com/jp/)
 - [GitHub Docs: Pull Requests](https://docs.github.com/ja/pull-requests)
 - [Git 入門（サル先生のGit入門）](https://backlog.com/ja/git-tutorial/)
-- `account-setup.md` — Git 初期設定手順
 - `CONTRIBUTING.md` — ブランチ名・コミットメッセージの規約
 - `templates/day-pr-body-template.md` — PR テンプレート

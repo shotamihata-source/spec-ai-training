@@ -2,48 +2,13 @@
 
 ## 今日のゴール
 
-AIツール（Gemini, NotebookLM）を初めて使い、自己紹介スライドを完成させて Google Drive に格納する。
+AIツール（Gemini, NotebookLM）を使って自己紹介スライドを完成させ、Google Drive に格納する。
 
 ---
 
 ## 必須課題
 
-### 課題1: アカウントセットアップ完了
-
-`account-setup.md` の「必須」セクションに記載された全アカウントにログインし、動作確認する。
-
-**手順:**
-
-1. **Gemini** にログインする
-   - ブラウザで https://gemini.google.com を開く
-   - チームの Google アカウントでログインする（招待メールに記載のアカウント）
-   - チャット画面が表示されれば成功
-   - 「こんにちは」と入力して送信 → AIが返事をすれば動作確認OK
-
-2. **Claude** にログインする
-   - ブラウザで https://claude.ai を開く
-   - 招待メールのリンクからログインする
-   - チャット画面が表示されれば成功
-   - 「自己紹介してください」と入力して送信 → AIが返事をすれば動作確認OK
-   - **デスクトップアプリも必ずダウンロードする**: https://claude.ai/download からインストール
-
-3. **ChatGPT** にログインする
-   - ブラウザで https://chatgpt.com を開く
-   - 個人アカウントでログイン（アカウントがなければ「Sign up」で新規作成）
-   - チャット画面が表示されれば成功
-   - 「テスト」と入力して送信 → AIが返事をすれば動作確認OK
-
-4. **GitHub** にログインする
-   - ブラウザで https://github.com を開く
-   - 個人アカウントでログイン（アカウントがなければ「Sign up」で新規作成）
-   - 招待メールが届いている場合は「Accept invitation」をクリック
-   - ダッシュボードが表示されれば成功
-
-**全4ツールにログインできたら、課題1は完了。**
-
----
-
-### 課題2: GeminiとNotebookLMで自己紹介スライドを作成する
+### 課題1: GeminiとNotebookLMで自己紹介スライドを作成する
 
 **Step 1: Gemini にスライド構成を考えてもらう**
 
@@ -83,7 +48,7 @@ AIツール（Gemini, NotebookLM）を初めて使い、自己紹介スライド
 
 ---
 
-### 課題3: 完成したスライドを Google Drive の Spec Division フォルダに格納する
+### 課題2: 完成したスライドを Google Drive の Spec Division フォルダに格納する
 
 格納先フォルダ: https://drive.google.com/drive/u/0/folders/1_fnoo33Kf6qNzuE6-2dB_rqac2uVNnws
 
@@ -113,7 +78,6 @@ Google Slides で作成した自己紹介プレゼンテーションを、Google
 
 ## ヒント
 
-- アカウント作成で詰まったら Slack で即報告する。翌朝にトラブルが残ると Day2 以降に影響する
 - スライドは AI に丸投げせず、「構成を考えて」→「内容を提案して」→「自分で仕上げる」の流れで進める
 - NotebookLM はソースとなるドキュメントを読み込ませると、その内容に基づいた回答を生成できる。「AIに文脈を与える」体験として有用
 - 完璧を目指さなくてOK。AIを使って何かを作る体験が今日の最大の目的
@@ -131,14 +95,11 @@ Google Slides で作成した自己紹介プレゼンテーションを、Google
 
 ## 理解度チェック（クイズ）
 
-Day1 はクイズなし。アカウントセットアップ完了が進行ゲートとなる。
+Day1 はクイズなし。
 
 **進行ゲートの確認:**
-- [ ] Gemini にログインできた
-- [ ] Claude にログインできた（デスクトップアプリもインストール済み）
-- [ ] ChatGPT にログインできた
-- [ ] GitHub にログインできた
 - [ ] 自己紹介スライドが Google Drive に格納されている
+- [ ] Slack で完了報告済み
 
 ## 早期完了者向け追加課題
 
@@ -154,4 +115,3 @@ Day1 はクイズなし。アカウントセットアップ完了が進行ゲー
 - [Gemini ヘルプ](https://support.google.com/gemini)
 - [NotebookLM ヘルプ](https://support.google.com/notebooklm)
 - [Google Slides ヘルプ](https://support.google.com/docs/topic/9052835)
-- `account-setup.md` — アカウント一覧とセットアップ手順

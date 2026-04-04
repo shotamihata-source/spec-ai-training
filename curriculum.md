@@ -1,6 +1,6 @@
 # AI Boot Camp カリキュラム（Day1-Day13）
 
-最終更新: 2026-04-04
+最終更新: 2026-04-05
 
 > 各Dayの詳細な手順は `days/day-XX.md` を参照してください。
 > このファイルはスケジュール概要と設計原則のみを記載しています。
@@ -12,10 +12,10 @@
 | Day1 | 4/1 (水) | AIで自己紹介スライド作成 | [day-01.md](days/day-01.md) |
 | Day2 | 4/2 (木) | Claude製品リサーチ | [day-02.md](days/day-02.md) |
 | Day3 | 4/3 (金) | ChatGPT Deep Research + ツール比較 | [day-03.md](days/day-03.md) |
-| Day4 | 4/6 (月) | AI全体像 + GitHub基礎 | [day-04.md](days/day-04.md) |
-| Day5 | 4/7 (火) | リサーチ実務 | [day-05.md](days/day-05.md) |
-| Day6 | 4/8 (水) | 展示会視察 + 視察レポート作成【半日】 | [day-06.md](days/day-06.md) |
-| Day7 | 4/9 (木) | 資料作成実務 + 人間/AI役割分担 | [day-07.md](days/day-07.md) |
+| Day4 | 4/6 (月) | 3ツール比較整理 + Markdown + Git | [day-04.md](days/day-04.md) |
+| Day5 | 4/7 (火) | リサーチ × AI + AIの限界を知る | [day-05.md](days/day-05.md) |
+| Day6 | 4/8 (水) | 資料作成 × AI + 人間 vs AI の役割分担 | [day-06.md](days/day-06.md) |
+| Day7 | 4/9 (木) | GTM実務 + 差別化整理 | [day-07.md](days/day-07.md) |
 | Day8 | 4/10 (金) | GTM実務 + 差別化整理 | [day-08.md](days/day-08.md) |
 | Day9 | 4/13 (月) | データ分析 + LLM基礎挙動 | [day-09.md](days/day-09.md) |
 | Day10 | 4/14 (火) | Project A 設計 | [day-10.md](days/day-10.md) |
