@@ -297,38 +297,19 @@ git push origin main
 
 ---
 
-## Git操作（研修リポジトリへの提出）
+## Git操作（研修リポジトリへの提出）— AI に依頼する
 
-Ghostty または Cursor のターミナル（`` Ctrl + ` ``）を開いて、研修リポジトリに移動します（project-a とは別のフォルダです）。
+Day10 と同様に、Git 操作は Cursor の AI に依頼する。研修リポジトリは project-a とは別のフォルダなので注意。
 
-```bash
-# 研修リポジトリに移動（クローン先がデスクトップの場合）
-cd ~/Desktop/spec-ai-training
-git pull origin main
-git checkout -b training/day-11-project-a-deploy
+**Cursor の AI チャット（Cmd+L）で以下のように依頼する:**
 
 ```
-
-**ファイルの作り方（Cursor を使う）:**
-
-Cursor のサイドバーで `training/day-11` フォルダを右クリック → 「New File」でファイルを作成する。フォルダが存在しない場合は `training` を右クリック → 「New Folder」→ `day-11` と入力。
-
-```bash
-# (ファイルを作成・編集した後)
-git add training/day-11/
-git status
-```
-
-以下のファイルが表示されればOK:
-```
-new file:   training/day-11/project-a-release-note.md
-new file:   training/day-11/roi-memo.md
-new file:   training/day-11/daily-report.md
-```
-
-```bash
-git commit -m "docs: add Day11 Project A release note and ROI memo"
-git push origin training/day-11-project-a-deploy
+研修リポジトリ（~/Desktop/spec-ai-training）で以下の Git 操作をしてください:
+1. main ブランチの最新を pull
+2. training/day-11-project-a-deploy という新しいブランチを作成
+3. training/day-11/ フォルダの変更をすべて add
+4. コミットメッセージ「docs: add Day11 Project A release note and ROI memo」でコミット
+5. リモートに push
 ```
 
 **GitHubでPRを作成:**

@@ -155,38 +155,19 @@ Claude に以下のように指示:
 
 ---
 
-## Git操作（最終提出）
+## Git操作（最終提出）— AI に依頼する
 
-Ghostty または Cursor のターミナル（`` Ctrl + ` ``）を開いて、リポジトリフォルダに移動します。
+最終日も Git 操作は AI に依頼する。Cursor の AI でも Claude Code でもOK。
 
-```bash
-# 研修リポジトリに移動（クローン先がデスクトップの場合）
-cd ~/Desktop/spec-ai-training
-git pull origin main
-git checkout -b training/day-13-final
+**AI に以下のように依頼する:**
 
 ```
-
-**ファイルの作り方（Cursor を使う）:**
-
-Cursor のサイドバーで `training/day-13` フォルダを右クリック → 「New File」でファイルを作成する。フォルダが存在しない場合は `training` を右クリック → 「New Folder」→ `day-13` と入力。
-
-```bash
-# (ファイルを作成・編集した後)
-git add training/day-13/
-git status
-```
-
-以下のファイルが表示されればOK:
-```
-new file:   training/day-13/final-presentation.md
-new file:   training/day-13/transition-plan.md
-new file:   training/day-13/daily-report.md
-```
-
-```bash
-git commit -m "docs: add Day13 final presentation and transition plan"
-git push origin training/day-13-final
+研修リポジトリ（~/Desktop/spec-ai-training）で以下の Git 操作をしてください:
+1. main ブランチの最新を pull
+2. training/day-13-final という新しいブランチを作成
+3. training/day-13/ フォルダの変更をすべて add
+4. コミットメッセージ「docs: add Day13 final presentation and transition plan」でコミット
+5. リモートに push
 ```
 
 **GitHubでPRを作成:**

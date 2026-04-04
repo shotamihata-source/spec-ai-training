@@ -191,38 +191,19 @@ Day11 と同じ形式で以下を作成する:
 
 ---
 
-## Git操作（研修リポジトリへの提出）
+## Git操作（研修リポジトリへの提出）— AI に依頼する
 
-Ghostty または Cursor のターミナル（`` Ctrl + ` ``）を開いて、研修リポジトリに移動します。
+Day12 では Claude Code デスクトップアプリを使っているので、Git 操作も Claude Code に依頼できる。もちろん Cursor の AI に依頼してもOK。
 
-```bash
-# 研修リポジトリに移動（クローン先がデスクトップの場合）
-cd ~/Desktop/spec-ai-training
-git pull origin main
-git checkout -b training/day-12-project-b
+**Claude Code のチャットで以下のように依頼する:**
 
 ```
-
-**ファイルの作り方（Cursor を使う）:**
-
-Cursor のサイドバーで `training/day-12` フォルダを右クリック → 「New File」でファイルを作成する。フォルダが存在しない場合は `training` を右クリック → 「New Folder」→ `day-12` と入力。
-
-```bash
-# (ファイルを作成・編集した後)
-git add training/day-12/
-git status
-```
-
-以下のファイルが表示されればOK:
-```
-new file:   training/day-12/project-b-requirements.md
-new file:   training/day-12/project-b-release-note.md
-new file:   training/day-12/daily-report.md
-```
-
-```bash
-git commit -m "docs: add Day12 Project B requirements and release note"
-git push origin training/day-12-project-b
+研修リポジトリ（~/Desktop/spec-ai-training）で以下の Git 操作をしてください:
+1. main ブランチの最新を pull
+2. training/day-12-project-b という新しいブランチを作成
+3. training/day-12/ フォルダの変更をすべて add
+4. コミットメッセージ「docs: add Day12 Project B requirements and release note」でコミット
+5. リモートに push
 ```
 
 **GitHubでPRを作成:**
